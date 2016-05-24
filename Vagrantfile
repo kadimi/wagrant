@@ -22,7 +22,7 @@
 	winrm set winrm/config/service/auth '@{Basic="true"}'
 	winrm set winrm/config/client/auth '@{Basic="true"}'
 	net stop winrm
-	sc config winrm start= auto
+	sc.exe config "WinRM" start= auto
 	net start winrm
 
 =end
