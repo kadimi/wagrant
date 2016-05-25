@@ -31,14 +31,17 @@ Vagrant.configure("2") do |config|
   config.vm.box = "modern.ie/" + box_name
   # If the box is win7-ie11, the convention for the box url is http://aka.ms/vagrant-win7-ie11
   config.vm.box_url = box_repo + "/vagrant-" + box_name
-  # big timeout since windows boot is very slow
-  config.vm.boot_timeout = 500
+  # big timeout since windows boot is slow and because we want enough time to enter commands on the first run
+  config.vm.boot_timeout = 900
 
   config.vm.guest = :windows
 
   config.vm.provision :shell, path: "./ps/Open-Ports.ps1"
   config.vm.provision :shell, path: "./ps/Install-Chocolatey.ps1"
   config.vm.provision :shell, path: "./ps/Install-Apps.ps1"
+
+  # Hostname
+  config.vm.hostname = 'wagarnt'
 
   # Port forwarding
   config.vm.network "forwarded_port", guest: 3389, host: 3389, id: "rdp", auto_correct: true
