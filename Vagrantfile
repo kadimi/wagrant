@@ -1,40 +1,25 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+
 ## SETUP
-# 
+#
 # 1. Run vagrant up
 # 2. Choose Home or Work network location
-# 3. Run in `powershell` with elevated privileges:
-=begin
-
-	netsh advfirewall firewall set rule group="remote administration" new enable=yes
-	netsh advfirewall firewall add rule name="Open Port 5985" dir=in action=allow protocol=TCP localport=5985
-	netsh advfirewall firewall add rule name="Open Port 3389" dir=in action=allow protocol=TCP localport=3389
-
-	winrm quickconfig -q
-	winrm quickconfig -transport:http
-	winrm set winrm/config '@{MaxTimeoutms="7200000"}'
-	winrm set winrm/config/winrs '@{MaxMemoryPerShellMB="0"}'
-	winrm set winrm/config/winrs '@{MaxProcessesPerShell="0"}'
-	winrm set winrm/config/winrs '@{MaxShellsPerUser="0"}'
-	winrm set winrm/config/service '@{AllowUnencrypted="true"}'
-	winrm set winrm/config/service/auth '@{Basic="true"}'
-	winrm set winrm/config/client/auth '@{Basic="true"}'
-	net stop winrm
-	sc.exe config "WinRM" start= auto
-	net start winrm
-
-=end
-# 
+# 3. Run in `cmd` with elevated privileges:
+#     `@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://git.io/vr64y'))"`
+# 4. ...
+#
+#
 ## RESOURCES
-# 
+#
 # https://github.com/mitchellh/vagrant/issues/6430
 # https://gist.github.com/andreptb/57e388df5e881937e62a
 # https://gist.github.com/sneal/39d47401e9eaefcf8727
 # http://stackoverflow.com/a/35721868
-# 
+#
 ##
+
 
 # box name into env var, same script can be used with different boxes. Defaults to win7-ie11.
 box_name = box_name = ENV['box_name'] != nil ? ENV['box_name'].strip : 'win7-ie11'
