@@ -15,10 +15,10 @@
 #
 # http://stackoverflow.com/a/35721868
 # http://support.auvik.com/hc/en-us/articles/204610500-How-to-enable-WMI-monitoring-on-a-single-Windows-device
+# https://blogs.msdn.microsoft.com/powershell/2009/04/02/setting-network-location-to-private/
 # https://github.com/mitchellh/vagrant/issues/6430
 # https://gist.github.com/andreptb/57e388df5e881937e62a
 # https://gist.github.com/sneal/39d47401e9eaefcf8727
-#
 ##
 
 
@@ -39,13 +39,16 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :shell, path: "./ps/Open-Ports.ps1"
   config.vm.provision :shell, path: "./ps/Install-Chocolatey.ps1"
-  config.vm.provision :shell, path: "./ps/Install-Apps.ps1"
+  # config.vm.provision :shell, path: "./ps/Install-Apps.ps1"
+
+  config.vm.provision "shell", inline: "choco install chocolateygui -y --force"
+
 
   # Hostname
   config.vm.hostname = 'wagarnt'
 
   # Port forwarding
-  config.vm.network "forwarded_port", guest: 3389, host: 3389, id: "rdp", auto_correct: true
+  config.vm.network :forwarded_port, guest: 3389, host: 3389, id: "rdp", auto_correct: true
   config.vm.network :forwarded_port, guest: 5985, host: 5985, id: "winrm", auto_correct: true
 
   # Second network interface, it must be public in order to get a static IP
