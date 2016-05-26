@@ -7,16 +7,17 @@
 # 1. Run vagrant up
 # 2. Choose Home or Work network location
 # 3. Run in `cmd` with elevated privileges:
-#     `@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://git.io/vr64y'))"`
+#      @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://git.io/vr64y'))"
 # 4. ...
 #
 #
 ## RESOURCES
 #
+# http://stackoverflow.com/a/35721868
+# http://support.auvik.com/hc/en-us/articles/204610500-How-to-enable-WMI-monitoring-on-a-single-Windows-device
 # https://github.com/mitchellh/vagrant/issues/6430
 # https://gist.github.com/andreptb/57e388df5e881937e62a
 # https://gist.github.com/sneal/39d47401e9eaefcf8727
-# http://stackoverflow.com/a/35721868
 #
 ##
 
@@ -32,7 +33,7 @@ Vagrant.configure("2") do |config|
   # If the box is win7-ie11, the convention for the box url is http://aka.ms/vagrant-win7-ie11
   config.vm.box_url = box_repo + "/vagrant-" + box_name
   # big timeout since windows boot is slow and because we want enough time to enter commands on the first run
-  config.vm.boot_timeout = 900
+  config.vm.boot_timeout = 9999
 
   config.vm.guest = :windows
 
