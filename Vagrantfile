@@ -41,8 +41,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, path: "./ps/Install-Chocolatey.ps1"
   # config.vm.provision :shell, path: "./ps/Install-Apps.ps1"
 
-  config.vm.provision "shell", inline: "choco install chocolateygui -y --force"
-
 
   # Hostname
   config.vm.hostname = 'wagarnt'
