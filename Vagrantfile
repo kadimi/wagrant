@@ -44,8 +44,6 @@ Vagrant.configure("2") do |config|
   # Provisioning
   config.vm.provision :shell, path: "./ps/Open-Ports.ps1"
   # config.vm.provision :shell, path: "./ps/Install-Chocolatey.ps1"
-  box_repo = ENV['box_repo'] != nil ? ENV['box_repo'].strip : 'http://aka.ms'
-
   # config.vm.provision :shell, path: "./ps/Install-Apps.ps1"
 
 
@@ -53,8 +51,8 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = 'wagarnt'
   config.vm.network :forwarded_port, guest: 3389, host: 3389, id: "rdp", auto_correct: true
   config.vm.network :forwarded_port, guest: 5985, host: 5985, id: "winrm", auto_correct: true
-  config.vm.network :public_network, ip: "192.168.1.88", :adapter => 2
-  config.vm.network :private_network, ip: "192.168.50.88", :adapter => 3
+  # config.vm.network :public_network, ip: "192.168.1.88", :adapter => 2
+  # config.vm.network :private_network, ip: "192.168.50.88", :adapter => 3
 
 
   # winrm config, uses modern.ie default username and password.
