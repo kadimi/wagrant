@@ -5,10 +5,9 @@
 ## SETUP
 #
 # 1. Run vagrant up
-# 2. Choose Home or Work network location
-# 3. Run in `cmd` with elevated privileges:
+# 2. Run in `cmd` with elevated privileges:
 #      @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://is.gd/wagrant'))"
-# 4. ...
+# 3. ...
 #
 #
 ## RESOURCES
