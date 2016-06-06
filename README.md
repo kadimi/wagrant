@@ -1,3 +1,7 @@
+## GOAL
+
+To streamline the process of creating virtual machines using the vagrant boxes provides by Microsoft.
+
 ## SETUP
 
 0. Clone the repository, feel free to use the name you want for the destination folder, for example:
