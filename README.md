@@ -10,10 +10,15 @@
 
     ```sh
     vagrant up                           # Windows 7 with IE11
+    # OR
     box_name='win7-ie10' vagrant up      # Windows 7 with IE10 
+    # OR
     box_name='win7-ie9' vagrant up       # Windows 7 with IE9 
+    # OR
     box_name='win7-ie8' vagrant up       # Windows 7 with IE8 
+    # OR
     box_name='win8-ie10' vagrant up      # Windows 8 with IE10 
+    # OR
     box_name='win81-ie11' vagrant up     # Windows 8 with IE11 
     ```
 
