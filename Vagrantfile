@@ -1,32 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-
-## SETUP
-#
-# 1. Run vagrant up
-# 2. Run in `cmd` with elevated privileges:
-#      @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://is.gd/wagrant'))"
-# 3. ...
-#
-#
-## RESOURCES
-#
-# http://stackoverflow.com/a/35721868
-# http://support.auvik.com/hc/en-us/articles/204610500-How-to-enable-WMI-monitoring-on-a-single-Windows-device
-# https://blogs.msdn.microsoft.com/powershell/2009/04/02/setting-network-location-to-private/
-# https://github.com/mitchellh/vagrant/issues/6430
-# https://gist.github.com/andreptb/57e388df5e881937e62a
-# https://gist.github.com/sneal/39d47401e9eaefcf8727
-#
-#
-## NOTES
-#
-# - `vagrant rdp` failure can be fixed by deleting the line with the faulty fingerprint on `~/.config/freerdp/known-hosts`, 
-#
-#
-##
-
 MINUTE = 60
 
 # box name into env var, same script can be used with different boxes. Defaults to win7-ie11.
