@@ -10,23 +10,23 @@
 
     ```sh
     vagrant up                           # Windows 7 with IE11
-    # OR
     box_name='win7-ie10' vagrant up      # Windows 7 with IE10 
-    # OR
     box_name='win7-ie9' vagrant up       # Windows 7 with IE9 
-    # OR
     box_name='win7-ie8' vagrant up       # Windows 7 with IE8 
-    # OR
     box_name='win8-ie10' vagrant up      # Windows 8 with IE10 
-    # OR
     box_name='win81-ie11' vagrant up     # Windows 8 with IE11 
     ```
 
-0. In the windows machine (the newly created guest), run this command in [a command prompt (aka cmd.exe) with elevated privileges](https://technet.microsoft.com/en-us/library/cc947813(v=ws.10).aspx):
+0. In the windows machine (the newly created guest), run this command in [a command prompt (aka cmd.exe) with elevated privileges](https://technet.microsoft.com/en-us/library/cc947813(v=ws.10).aspx). Once the set of commands completes, provisioning will be initaited:
 
     ```sh
     @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://is.gd/wagrant'))"
     ```
+
+## NOTES
+
+- You don't need to provide the `box_name` variable every time, that's only needed with the first `vagrant up`.  
+- The command `vagrant rdp` may fail, this can be fixed by deleting the line with the faulty fingerprint in `~/.config/freerdp/known-hosts`. 
 
 ## RESOURCES
 
@@ -36,7 +36,3 @@
 - https://github.com/mitchellh/vagrant/issues/6430
 - https://gist.github.com/andreptb/57e388df5e881937e62a
 - https://gist.github.com/sneal/39d47401e9eaefcf8727
-
-## NOTES
-
-- The command `vagrant rdp` may fail, this can be fixed by deleting the line with the faulty fingerprint in `~/.config/freerdp/known-hosts`. 
