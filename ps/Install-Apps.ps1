@@ -2,12 +2,8 @@ C:\ProgramData\Chocolatey\choco.exe install -y --force vcredist2010
 C:\ProgramData\Chocolatey\choco.exe install -y --force vcredist2012
 C:\ProgramData\Chocolatey\choco.exe install -y --force wamp-server
 C:\ProgramData\Chocolatey\choco.exe install -y --force vim
-C:\ProgramData\Chocolatey\choco.exe install -y --force atom
-C:\ProgramData\Chocolatey\choco.exe install -y --force sublimetext3
-C:\ProgramData\Chocolatey\choco.exe install -y --force notepadplusplus
+C:\ProgramData\Chocolatey\choco.exe install -y --force notepadplusplus.install
 C:\ProgramData\Chocolatey\choco.exe install -y --force firefox
 C:\ProgramData\Chocolatey\choco.exe install -y --force googlechrome
 C:\ProgramData\Chocolatey\choco.exe install -y --force ruby
 C:\ProgramData\Chocolatey\choco.exe install -y --force nodejs
-C:\ProgramData\Chocolatey\choco.exe install -y --force sudo
-C:\ProgramData\Chocolatey\choco.exe install -y --force putty.portable
