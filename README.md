@@ -14,11 +14,11 @@ To streamline the process of creating virtual machines using the vagrant boxes p
 
     ```sh
     vagrant up                           # Windows 7 with IE11
-    box_name='win7-ie10' vagrant up      # Windows 7 with IE10 
-    box_name='win7-ie9' vagrant up       # Windows 7 with IE9 
-    box_name='win7-ie8' vagrant up       # Windows 7 with IE8 
-    box_name='win8-ie10' vagrant up      # Windows 8 with IE10 
-    box_name='win81-ie11' vagrant up     # Windows 8 with IE11 
+    box_name='win7-ie10' vagrant up      # Windows 7 with IE10
+    box_name='win7-ie9' vagrant up       # Windows 7 with IE9
+    box_name='win7-ie8' vagrant up       # Windows 7 with IE8
+    box_name='win8-ie10' vagrant up      # Windows 8 with IE10
+    box_name='win81-ie11' vagrant up     # Windows 8 with IE11
     ```
 
 0. In the windows machine (the newly created guest), run this command in [a command prompt (aka cmd.exe) with elevated privileges](https://technet.microsoft.com/en-us/library/cc947813(v=ws.10).aspx). Once the set of commands completes, provisioning will be initaited:
@@ -29,8 +29,9 @@ To streamline the process of creating virtual machines using the vagrant boxes p
 
 ## NOTES
 
-- You don't need to provide the `box_name` variable every time, that's only needed with the first `vagrant up`.  
-- The command `vagrant rdp` may fail, this can be fixed by deleting the line with the faulty fingerprint in `~/.config/freerdp/known-hosts`. 
+- Some apps are installed during provisioning, you can change that to your liking, see [`ps/Install-Apps.ps1`](https://github.com/kadimi/wagrant/blob/master/ps/Install-Apps.ps1).
+- You don't need to provide the `box_name` variable every time, that's only needed with the first `vagrant up`.
+- The command `vagrant rdp` may fail, this can be fixed by deleting the line with the faulty fingerprint in `~/.config/freerdp/known-hosts`.
 
 ## RESOURCES
 
