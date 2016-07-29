@@ -1,6 +1,6 @@
 ## GOAL
 
-To streamline the process of creating virtual machines using the vagrant boxes provides by Microsoft.
+To streamline the process of creating virtual machines using the vagrant boxes provided by Microsoft.
 
 ## SETUP
 
