@@ -13,31 +13,17 @@ To streamline the process of creating virtual machines using the vagrant boxes p
 0. Run **one** of these commands to create the box you want:
 
     ```sh
-    # Default is Windows 7 with IE11
-    vagrant up
-
-
-    # Windows 10
+    vagrant up                                   # Windows 7 with IE11 (default)
     box_name='msedge.win10.vagrant' vagrant up   # Windows 10 with MSEdge
-
-    # Windows 8.1
-    box_name='ie11.win81.vagrant' vagrant up   # Windows 8 with IE11
-
-    # Windows 8
-    box_name='ie10.win8.vagrant' vagrant up   # Windows 8 with IE10
-
-    # Windows 7
-    box_name='ie8.win7.vagrant' vagrant up   # Windows 7 with IE8
-    box_name='ie9.win7.vagrant' vagrant up   # Windows 7 with IE9
-    box_name='ie10.win7.vagrant' vagrant up  # Windows 7 with IE10
-    box_name='ie11.win7.vagrant' vagrant up  # Windows 7 with IE11 (default)
-
-    # Windows Vista
-    box_name='ie7.vista.vagrant' vagrant up     # Windows Vista with IE7
-
-    # Windows XP
-    box_name='ie6.xp.vagrant' vagrant up     # Windows XP with IE6
-    box_name='ie8.xp.vagrant' vagrant up     # Windows XP with IE8
+    box_name='ie11.win81.vagrant' vagrant up     # Windows 8.1 with IE11
+    box_name='ie10.win8.vagrant' vagrant up      # Windows 8 with IE10
+    box_name='ie11.win7.vagrant' vagrant up      # Windows 7 with IE11
+    box_name='ie10.win7.vagrant' vagrant up      # Windows 7 with IE10
+    box_name='ie9.win7.vagrant' vagrant up       # Windows 7 with IE9
+    box_name='ie8.win7.vagrant' vagrant up       # Windows 7 with IE8
+    box_name='ie7.vista.vagrant' vagrant up      # Windows Vista with IE7
+    box_name='ie8.xp.vagrant' vagrant up         # Windows XP with IE8
+    box_name='ie6.xp.vagrant' vagrant up         # Windows XP with IE6
     ```
 
 0. In the windows machine (the newly created guest), run this command in [a command prompt (aka cmd.exe) with elevated privileges](https://technet.microsoft.com/en-us/library/cc947813(v=ws.10).aspx). Once the set of commands completes, provisioning will be initaited:
